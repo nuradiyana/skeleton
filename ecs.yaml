@@ -1,0 +1,17 @@
+parameters:
+  skip:
+    PhpCsFixer\Fixer\ReturnNotation\ReturnAssignmentFixer: ~
+
+imports:
+  - { resource: 'vendor/symplify/easy-coding-standard/config/set/psr12.yaml' }
+  - { resource: 'vendor/symplify/easy-coding-standard/config/set/php71.yaml' }
+  - { resource: 'vendor/symplify/easy-coding-standard/config/set/common.yaml' }
+  - { resource: 'vendor/symplify/easy-coding-standard/config/set/clean-code.yaml' }
+
+services:
+  PhpCsFixer\Fixer\Import\OrderedImportsFixer:
+    sort_algorithm: length
+  PhpCsFixer\Fixer\Import\NoLeadingImportSlashFixer: ~
+  PhpCsFixer\Fixer\FunctionNotation\NativeFunctionInvocationFixer: ~
+  PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: ~
+  PhpCsFixer\Fixer\ClassNotation\FinalClassFixer: ~
